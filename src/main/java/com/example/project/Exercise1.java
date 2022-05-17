@@ -15,7 +15,19 @@ public class Exercise1 {
 	}
 
 	public boolean esCuadradoPerfecto(int numero) {
-
-		return false;
+		int indice = 1;
+	   	int valor = evaluarCuadrado(numero, indice);
+	    
+	    	if(valor==1)
+	        	return true;
+	    	return false;
+	}
+	public int evaluarCuadrado(int num, int index){
+		if(Math.pow(index,2)==num)
+	        	return 1;
+	    	else if(Math.pow(index,2)>num){
+	        	return -1;
+	    	}
+	    	return evaluarCuadrado(num, index+1);	
 	}
 }
